@@ -7,5 +7,5 @@ sudo apt install nodejs -y
 sudo apt install npm -y
 
 cd /app
-sudo npm install
+npm install
 npm start
