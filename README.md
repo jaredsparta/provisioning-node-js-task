@@ -71,18 +71,7 @@ end
 
 - To run an `nginx` server we need to install it within the VM machine. We can do this via `vagrant ssh` or we can write a shell script that will do it for us when we run `vagrant up`. I detail the latter in the following.
 
-- To allow us to automate the action of creating a VM with the necessary provisions, we can use a shell script. These files end with the `.sh` extension. Our shell file will be called `provision.sh` and inside it we write:
-```bash
-#!/bin/bash
-
-sudo apt-get update
-sudo apt-get install nginx -y
-sudo apt-get install nodejs -y
-sudo apt-get install npm
-cd /app
-sudo npm install pm2 -g
-npm start
-```
+- To allow us to automate the action of creating a VM with the necessary provisions, we can use a shell script. These files end with the `.sh` extension. Our shell file will be called `provision.sh`, so look at it in a text editor.
 
 - For these scripts to run in the VM, we add a line in our `Vagrantfile`. Our file should then look like the following:
 ```ruby
@@ -97,8 +86,10 @@ Vagrant.configure("2") do |config|
   config.vm.provision "shell", path: "environment/provision.sh"
 end
 ```
+- The commands in the `provision.sh` file detail all the commands needed to be able to get the app running on the specifided address and port. To see it in a browser, navigate to [development.local:3000](development.local:3000)
 
 - Now to check using tests, we `cd environment/spec-test` to navigate to our environment folder, with our tests. Then run `rake spec` to run the tests. It should tell us which requirements fail and which didn't.
+
 
 <br>
 
