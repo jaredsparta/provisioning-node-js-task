@@ -22,17 +22,17 @@
 # Instructions
 
 **Main Commands and what they do**
-- `vagrant init` - this creates a fresh `Vagrantfile` that can be changed in a text editor. This is written in Ruby.
+- `vagrant init` - this creates a fresh Vagrantfile that can be changed in a text editor. This is written in Ruby.
 
-- `vagrant up` - this will start a VM with the information written in the `Vagrantfile`. You need to run this command in the same directory as a `Vagrantfile`
+- `vagrant up` - this will start a VM with the information written in the Vagrantfil`. You need to run this command in the same directory as a Vagrantfile
 
 - `vagrant halt` - this will stop a VM from running
 
 - `vagrant destroy` - this will remove the VM from the list of VM's in Oracle
-> This won't remove the `Vagrantfile` so you can just `vagrant up` to create a new VM with the provisioned file
+> This won't remove the Vagrantfile so you can just `vagrant up` to create a new VM with the provisioned file
 
 - `vagrant reload` - this is the combination of typing `vagrant halt` and then `vagrant up`.
-> Use this if you make a change to the `Vagrantfile` while the VM is running and you want to use those changes
+> Use this if you make a change to the Vagrantfile while the VM is running and you want to use those changes
 
 - `vagrant ssh` - this will connect to your VM and allow you to use it from your terminal on your primary OS
 
